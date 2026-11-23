@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The World in One Day — Sunday 22 November 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; }
+  body {
+    background: #f4efe3;
+    color: #1a1a1a;
+    font-family: "Noto Sans", "DejaVu Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 1024px; height: 1024px;
+    padding: 10px 12px 8px 12px;
+    display: flex; flex-direction: column;
+  }
+  /* ---------- Masthead ---------- */
+  .masthead {
+    background: #b42318; color: #fff;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 6px 16px; flex: 0 0 46px;
+  }
+  .masthead .brand {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-weight: 900; font-size: 26px; letter-spacing: 0.5px; white-space: nowrap;
+  }
+  .masthead .meta {
+    text-align: right; font-weight: 700; font-size: 12px; line-height: 1.25; letter-spacing: 0.3px;
+  }
+  /* ---------- Title ---------- */
+  .title {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-weight: 900; font-size: 42px; line-height: 1.05; text-align: center;
+    flex: 0 0 48px; padding-top: 2px;
+  }
+  .subtitle {
+    text-align: center; font-weight: 700; font-size: 13px;
+    flex: 0 0 16px;
+  }
+  /* ---------- Timeline ---------- */
+  .timeline {
+    display: flex; justify-content: space-between; align-items: center;
+    background: #1a1a1a; color: #fff;
+    flex: 0 0 24px; margin-top: 4px; padding: 0 10px;
+    font-size: 10px; font-weight: 700; overflow: hidden; white-space: nowrap;
+  }
+  .timeline .tl-label { color: #ff6b5e; font-weight: 800; letter-spacing: 0.5px; }
+  .timeline .dot { color: #888; font-weight: 400; }
+  /* ---------- Stats strip ---------- */
+  .stats {
+    display: flex; border-top: 2px solid #1a1a1a; border-bottom: 2px solid #1a1a1a;
+    flex: 0 0 62px; margin-top: 4px;
+  }
+  .stat { flex: 1; text-align: center; padding: 5px 4px 3px 4px; border-right: 1px solid #999; }
+  .stat:last-child { border-right: none; }
+  .stat .num {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-weight: 900; font-size: 24px; line-height: 1;
+  }
+  .stat .cap { font-size: 10px; line-height: 1.2; margin-top: 2px; }
+  /* ---------- Region tabs ---------- */
+  .tabs {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1.5px solid #1a1a1a;
+    flex: 0 0 22px; padding: 0 8px;
+    font-size: 11.5px; font-weight: 700;
+  }
+  .tabs .dot { color: #999; font-weight: 400; }
+  /* ---------- Heroes ---------- */
+  .heroes { display: flex; gap: 10px; flex: 0 0 236px; margin-top: 6px; }
+  .hero { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  .hero img { width: 100%; height: 76px; object-fit: cover; display: block; border: 1px solid #999; }
+  .hero svg.heromap { width: 100%; height: 76px; display: block; border: 1px solid #999; }
+  .hero-img-wrap { position: relative; }
+  .hero-img-wrap .inset {
+    position: absolute; right: 3px; bottom: 3px;
+    width: 100px; height: 58px; border: 1.5px solid #1a1a1a; background: #fff; display: block;
+  }
+  .hero .label {
+    background: #b42318; color: #fff; text-align: center;
+    font-weight: 800; font-size: 11px; line-height: 1.25; padding: 2px 4px; margin-top: 2px;
+    text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; overflow: hidden;
+  }
+  .hero .loc { text-align: center; font-size: 10px; font-weight: 700; margin-top: 1px; }
+  .hero h2 {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-weight: 900; font-size: 19px; line-height: 1.12; margin-top: 3px;
+  }
+  .hero .body { font-size: 11px; line-height: 1.3; margin-top: 2px; }
+  .hero .src { font-size: 10px; margin-top: auto; padding-top: 3px; display: flex; justify-content: space-between; }
+  .hero .src .badge {
+    border: 1.5px solid #1a1a1a; padding: 0 5px; font-weight: 700; font-size: 9.5px; line-height: 1.5;
+  }
+  /* ---------- Grid ---------- */
+  .grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;
+    flex: 0 0 205px; margin-top: 6px;
+    border-top: 1.5px solid #1a1a1a; padding-top: 5px;
+  }
+  .cell { min-width: 0; display: flex; flex-direction: column; }
+  .cell .tag {
+    display: inline-block; align-self: flex-start;
+    background: #b42318; color: #fff; font-weight: 800; font-size: 9px;
+    padding: 1px 5px; text-transform: uppercase; letter-spacing: 0.3px;
+  }
+  .cell h3 { font-size: 11.5px; line-height: 1.2; font-weight: 800; margin-top: 2px; }
+  .cell .b { font-size: 9.5px; line-height: 1.25; margin-top: 2px; }
+  .cell .s { font-size: 8.5px; margin-top: auto; padding-top: 2px; color: #333; }
+  /* ---------- Bottom: map + list ---------- */
+  .bottom { display: flex; gap: 10px; flex: 1 1 auto; margin-top: 4px; min-height: 0; overflow: hidden; }
+  .mapbox { flex: 0 0 296px; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+  .mapbox h3 {
+    font-family: "Noto Serif", "DejaVu Serif", serif;
+    font-weight: 900; font-size: 16px; letter-spacing: 0.5px; text-align: center;
+    border-top: 1.5px solid #1a1a1a; border-bottom: 1.5px solid #1a1a1a; padding: 2px 0;
+  }
+  .mapwrap { position: relative; flex: 0 0 190px; min-height: 0; margin-top: 4px; background: #e8e0cc; }
+  .mapwrap img { width: 100%; height: 100%; object-fit: contain; display: block; border: 1px solid #999; }
+  .pin {
+    position: absolute; width: 11px; height: 11px; border-radius: 50%;
+    color: #fff; font-size: 6.5px; font-weight: 800; line-height: 11px; text-align: center;
+    transform: translate(-50%,-50%); border: 1px solid #fff; box-shadow: 0 0 1px rgba(0,0,0,.6);
+  }
+  .maplegend { font-size: 8.5px; text-align: center; margin-top: 2px; color: #333; }
+  .listbox { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+  .listbox h3 {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
+    border-top: 1.5px solid #1a1a1a; border-bottom: 1.5px solid #1a1a1a; padding: 2px 0;
+  }
+  .listcols { display: flex; gap: 14px; flex: 1; min-height: 0; margin-top: 3px; overflow: hidden; }
+  .listcols ol { flex: 1; list-style: none; min-width: 0; }
+  .listcols li {
+    font-size: 9.8px; line-height: 1.22; padding: 1px 0;
+  }
+  .listcols li b { font-weight: 800; }
+  /* ---------- Date check ---------- */
+  .datecheck {
+    border: 1.5px solid #1a1a1a; padding: 3px 8px; margin-top: 6px;
+    font-size: 9.5px; line-height: 1.3; flex: 0 0 auto;
+  }
+  .datecheck b { font-weight: 800; }
+  /* ---------- Footer ---------- */
+  .footer { text-align: center; flex: 0 0 auto; margin-top: 4px; }
+  .footer .line1 { font-size: 10.5px; }
+  .footer .line2 { font-size: 9px; margin-top: 1px; color: #333; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="brand">THE WORLD IN ONE DAY</div>
+    <div class="meta">35 STORIES &middot; 9 REGIONS &middot; EVERY ONE<br>DATED SUNDAY 22 NOVEMBER 2026</div>
+  </div>
+
+  <div class="title">Sunday 22 November 2026</div>
+
+  <div class="subtitle">COP31 ends with no deal &middot; 186 drones over Ukraine &middot; Iran&rsquo;s radar claim meets Bahrain&rsquo;s denial</div>
+
+  <div class="timeline">
+    <span class="tl-label">THE DAY IN UTC</span>
+    <span>00:51 Peru M5.1 aftershock</span><span class="dot">&middot;</span>
+    <span>03:00 COP31 objections close</span><span class="dot">&middot;</span>
+    <span>05:30 Vegas GP ends</span><span class="dot">&middot;</span>
+    <span>06:00 161 of 186 drones downed</span><span class="dot">&middot;</span>
+    <span>12:23 Falcon 9 lifts off</span><span class="dot">&middot;</span>
+    <span>12:50 COP31 text rejected</span><span class="dot">&middot;</span>
+    <span>21:33 Israel talks fail</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">186</div><div class="cap">&mdash; drones fired at Ukraine overnight</div></div>
+    <div class="stat"><div class="num">161</div><div class="cap">&mdash; drones shot down or suppressed</div></div>
+    <div class="stat"><div class="num">14</div><div class="cap">&mdash; missing in the Dymer block collapse</div></div>
+    <div class="stat"><div class="num">98.79%</div><div class="cap">&mdash; final turnout, Hong Kong polls</div></div>
+    <div class="stat"><div class="num">720/9</div><div class="cap">&mdash; India&rsquo;s record Test total in NZ</div></div>
+    <div class="stat"><div class="num">258</div><div class="cap">&mdash; House seats, Democrats&rsquo; best since 1992</div></div>
+  </div>
+
+  <div class="tabs">
+    <span>Europe &middot; 8</span><span class="dot">&bull;</span>
+    <span>Middle East &middot; 7</span><span class="dot">&bull;</span>
+    <span>Americas &middot; 8</span><span class="dot">&bull;</span>
+    <span>Africa &middot; 4</span><span class="dot">&bull;</span>
+    <span>South Asia &middot; 2</span><span class="dot">&bull;</span>
+    <span>East Asia &middot; 2</span><span class="dot">&bull;</span>
+    <span>SE Asia &middot; 1</span><span class="dot">&bull;</span>
+    <span>Oceania &middot; 1</span><span class="dot">&bull;</span>
+    <span>Global &middot; 2</span>
+  </div>
+
+  <div class="heroes">
+    <div class="hero">
+      <svg class="heromap" viewBox="0 0 326 92" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="COP31 draft document stamped rejected">
+        <rect x="0" y="0" width="326" height="92" fill="#dfe8ee"/>
+        <rect x="0" y="0" width="326" height="92" fill="none" stroke="#999" stroke-width="1"/>
+        <!-- calendar strip, left -->
+        <rect x="8" y="10" width="72" height="72" fill="#fff" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="44" y="22" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#1a1a1a" text-anchor="middle">ANTALYA</text>
+        <text x="44" y="34" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#666" text-anchor="middle">FRI 20 NOV</text>
+        <text x="44" y="44" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#666" text-anchor="middle">due to end</text>
+        <line x1="14" y1="50" x2="74" y2="50" stroke="#999" stroke-width="0.7"/>
+        <text x="44" y="62" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#b42318" text-anchor="middle">SUN 22 NOV</text>
+        <text x="44" y="72" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#b42318" text-anchor="middle">NO DEAL</text>
+        <!-- draft document -->
+        <rect x="92" y="8" width="140" height="76" fill="#fff" stroke="#1a1a1a" stroke-width="1"/>
+        <rect x="92" y="8" width="140" height="14" fill="#1a1a1a"/>
+        <text x="162" y="18" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="8" font-weight="800" fill="#fff" text-anchor="middle">ANTALYA PACT &mdash; FINAL DRAFT</text>
+        <rect x="100" y="28" width="124" height="4" fill="#ccc"/>
+        <rect x="100" y="36" width="124" height="4" fill="#ccc"/>
+        <rect x="100" y="44" width="124" height="4" fill="#ccc"/>
+        <rect x="100" y="52" width="124" height="4" fill="#ccc"/>
+        <rect x="100" y="60" width="80" height="4" fill="#ccc"/>
+        <!-- REJECTED stamp -->
+        <g transform="rotate(-14 162 46)">
+          <rect x="102" y="34" width="120" height="24" fill="none" stroke="#b42318" stroke-width="2.5"/>
+          <text x="162" y="51" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="900" fill="#b42318" text-anchor="middle" letter-spacing="2">REJECTED</text>
+        </g>
+        <!-- right callout -->
+        <text x="244" y="22" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7.5" font-weight="800" fill="#1a1a1a">LONGEST COP</text>
+        <text x="244" y="32" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7.5" font-weight="800" fill="#1a1a1a">ON RECORD</text>
+        <text x="244" y="46" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#333">2 days overtime</text>
+        <text x="244" y="56" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#333">10-page draft</text>
+        <text x="244" y="66" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#333">EU, UK, Panama</text>
+        <text x="244" y="76" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" fill="#333">objected</text>
+        <text x="244" y="86" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="700" fill="#b42318">fossil fuels: 0 mentions</text>
+      </svg>
+      <div class="label">COP31 Ends With No Deal &mdash; Antalya</div>
+      <div class="loc">1 &middot; ANTALYA, T&Uuml;RKIYE &middot; GLOBAL</div>
+      <h2>COP31 ends with no deal &mdash; the longest summit yet</h2>
+      <div class="body">The final 10-page &ldquo;Antalya Pact&rdquo; draft, which never mentions fossil fuels, was rejected on Sunday by the EU, UK, Panama and others. President Murat Kurum conceded &ldquo;there is no agreement on this text&rdquo;.</div>
+      <div class="src"><span>Source: Reuters &middot; AP</span><span class="badge">CONFIRMED</span></div>
+    </div>
+    <div class="hero">
+      <div class="hero-img-wrap">
+        <img src="assets/media-generation-dymer-block-night-0-cf529155-60a2-4d21-a24d-37ae7485d0f1.webp" alt="Apartment block collapsed at night, rescue workers at work">
+        <svg class="inset" viewBox="0 0 100 58" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the Kyiv region">
+          <rect x="0" y="0" width="100" height="58" fill="#e6d9b8"/>
+          <path d="M 52,0 L 48,14 L 54,30 L 50,44 L 54,58" stroke="#aecdd9" stroke-width="4" fill="none"/>
+          <path d="M 52,0 L 48,14 L 54,30 L 50,44 L 54,58" stroke="#7fa8c9" stroke-width="1.2" fill="none"/>
+          <circle cx="50" cy="38" r="3" fill="#1a1a1a"/>
+          <circle cx="50" cy="38" r="1.2" fill="#fff"/>
+          <circle cx="54" cy="20" r="3.2" fill="#b42318"/>
+          <circle cx="54" cy="20" r="1.3" fill="#ffcc00"/>
+          <text x="58" y="22" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="6.5" font-weight="800" fill="#b42318">DYMER</text>
+          <text x="58" y="40" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="6.5" font-weight="800" fill="#1a1a1a">KYIV</text>
+          <text x="4" y="54" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="5.5" font-weight="700" fill="#333">45 km N of Kyiv</text>
+        </svg>
+      </div>
+      <div class="label">186 Drones Over Ukraine &mdash; Dymer</div>
+      <div class="loc">2 &middot; DYMER, KYIV REGION &middot; EUROPE</div>
+      <h2>Russia fires 186 drones; a Kyiv-region block collapses</h2>
+      <div class="body">186 drones were launched overnight; 161 were shot down or suppressed, with hits at 18 locations. A drone destroyed a five-storey block in Dymer: 3 killed, 4 wounded, 14 unaccounted for.</div>
+      <div class="src"><span>Source: AP &middot; Kyiv</span><span class="badge">CONFIRMED</span></div>
+    </div>
+    <div class="hero">
+      <svg class="heromap" viewBox="0 0 326 92" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the Gulf with Bahrain">
+        <rect x="0" y="0" width="326" height="92" fill="#aecdd9"/>
+        <polygon points="0,0 326,0 326,26 300,31 272,25 242,31 212,26 182,32 152,27 122,33 92,28 62,33 32,29 0,35" fill="#e6d9b8"/>
+        <polygon points="0,92 0,66 32,60 62,66 92,60 122,66 152,60 182,66 212,60 242,66 272,61 302,67 326,63 326,92" fill="#e6d9b8"/>
+        <polygon points="170,62 174,47 182,47 184,62" fill="#e6d9b8"/>
+        <circle cx="118" cy="52" r="3.5" fill="#b42318" stroke="#fff" stroke-width="0.8"/>
+        <circle cx="128" cy="47" r="3.5" fill="#b42318" stroke="#fff" stroke-width="0.8"/>
+        <circle cx="156" cy="43" r="4.5" fill="#e65100"/>
+        <circle cx="156" cy="43" r="2" fill="#ffcc00"/>
+        <text x="14" y="16" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="11" font-weight="800" fill="#1a1a1a">IRAN</text>
+        <text x="114" y="38" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="6.5" font-weight="800" fill="#b42318" text-anchor="end">AL-RIFFA</text>
+        <text x="132" y="38" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="6.5" font-weight="800" fill="#b42318" text-anchor="start">AWALI SAKHIR</text>
+        <text x="208" y="36" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="700" fill="#1a1a1a" letter-spacing="0.5">STRAIT OF HORMUZ</text>
+        <text x="104" y="62" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#1a1a1a">BAHRAIN</text>
+        <text x="168" y="74" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#1a1a1a">QATAR</text>
+        <text x="16" y="85" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="8" font-weight="800" fill="#1a1a1a">SAUDI ARABIA</text>
+        <text x="222" y="83" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#1a1a1a">U.A.E.</text>
+        <text x="284" y="85" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="8" font-weight="800" fill="#1a1a1a">OMAN</text>
+        <rect x="186" y="4" width="138" height="13" fill="#fff" opacity="0.93" stroke="#b42318" stroke-width="1"/>
+        <text x="190" y="13" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#b42318">2 RADARS CLAIMED (IRGC)</text>
+      </svg>
+      <div class="label">Iran Claims Radar Hits &mdash; Bahrain Denies</div>
+      <div class="loc">3 &middot; MANAMA, BAHRAIN &middot; MIDDLE EAST</div>
+      <h2>Iran claims radar hits in Bahrain; Bahrain denies</h2>
+      <div class="body">The IRGC said it hit two US Patriot radars at Al-Riffa and Awali Sakhir on Saturday night. Bahrain said Sunday its defences intercepted the attacks; a civilian industrial site was hit and set ablaze, 2 injured.</div>
+      <div class="src"><span>Source: Reuters &middot; Manama</span><span class="badge">CLAIM</span></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><span class="tag">US House</span><h3>Democrats clinch 258 House seats, best since 1992</h3><div class="b">A recount win in North Carolina&rsquo;s 5th district gave Democrats 258 seats, their biggest since 1992.</div><div class="s">Source: Washington &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Serang Fire</span><h3>Candy-factory fire in Cikande: 3 dead, 36 missing</h3><div class="b">The Sunday search went on at the Banten candy plant after Saturday&rsquo;s blaze; 300 workers were inside, 15 rescued.</div><div class="s">Source: Serang &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Benghazi</span><h3>Sea drones hit a Russian warship; it capsizes</h3><div class="b">Suspected Ukrainian sea drones struck the corvette Merkury at Benghazi; it caught fire and mostly sank.</div><div class="s">Source: Benghazi &mdash; CLAIM</div></div>
+    <div class="cell"><span class="tag">Gulf of Finland</span><h3>Burning Sparta II towed out of Finnish waters</h3><div class="b">The Russian cargo ship, hit on Saturday, was still burning; a Russian rescue vessel began towing it out.</div><div class="s">Source: Helsinki &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Las Vegas GP</span><h3>Verstappen wins a wild Las Vegas Grand Prix</h3><div class="b">Verstappen won by 0.639s from Norris after 35 lead changes; his 75th career win.</div><div class="s">Source: Las Vegas &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Wellington Test</span><h3>India declare 720/9, a record total in New Zealand</h3><div class="b">India declared on the highest Test total ever in New Zealand; Rahul 136, Pant 128. NZ closed 119/2, trailing by 233.</div><div class="s">Source: Wellington &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">San Antonio</span><h3>Wembanyama scores 50 in a first-ever 50/15/5/4 game</h3><div class="b">Wemby had 50 points, 19 rebounds, 5 blocks and 4 steals as the Spurs beat the Pelicans 114&ndash;91.</div><div class="s">Source: San Antonio &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Hong Kong Vote</span><h3>Hong Kong polls set a record: 98.79% turnout</h3><div class="b">Final turnout hit a record 98.79%; 856 candidates contested 723 seats, with results on Sunday evening.</div><div class="s">Source: Hong Kong &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Tehran Energy</span><h3>Iran begins rolling power cuts, up to 2 hours a day</h3><div class="b">Cuts began on Sunday, blamed on fuel supply and strikes on gas infrastructure.</div><div class="s">Source: Tehran &mdash; CONFIRMED</div></div>
+    <div class="cell"><span class="tag">Bras&iacute;lia</span><h3>Bolsonaro still in intensive care in Bras&iacute;lia</h3><div class="b">In ICU since Saturday with a bowel obstruction, he had a difficult night; further surgery is possible.</div><div class="s">Source: Bras&iacute;lia &mdash; CONFIRMED</div></div>
+  </div>
+
+  <div class="bottom">
+    <div class="mapbox">
+      <h3>WHERE IT HAPPENED</h3>
+      <div class="mapwrap">
+        <img src="assets/world-map-vintage.png" alt="World map">
+        <span class="pin" style="left:57.7%;top:30%;background:#424242">1</span>
+        <span class="pin" style="left:57.7%;top:22%;background:#1f4e79">2</span>
+        <span class="pin" style="left:63.5%;top:35%;background:#b42318">3</span>
+        <span class="pin" style="left:29.8%;top:28%;background:#2e7d32">4</span>
+        <span class="pin" style="left:78.9%;top:53%;background:#795548">5</span>
+        <span class="pin" style="left:55.8%;top:32%;background:#d35400">6</span>
+        <span class="pin" style="left:57.7%;top:17%;background:#1f4e79">7</span>
+        <span class="pin" style="left:19.2%;top:30%;background:#2e7d32">8</span>
+        <span class="pin" style="left:92.4%;top:72%;background:#6a1b9a">9</span>
+        <span class="pin" style="left:24%;top:34%;background:#2e7d32">10</span>
+        <span class="pin" style="left:80.8%;top:38%;background:#00838f">11</span>
+        <span class="pin" style="left:64.5%;top:28%;background:#b42318">12</span>
+        <span class="pin" style="left:37.5%;top:59%;background:#2e7d32">13</span>
+        <span class="pin" style="left:59%;top:33%;background:#b42318">14</span>
+        <span class="pin" style="left:58%;top:34.5%;background:#b42318">15</span>
+        <span class="pin" style="left:58.7%;top:41%;background:#d35400">16</span>
+        <span class="pin" style="left:57.7%;top:46%;background:#d35400">17</span>
+        <span class="pin" style="left:83.7%;top:29%;background:#00838f">18</span>
+        <span class="pin" style="left:70.2%;top:34%;background:#6a1b9a">19</span>
+        <span class="pin" style="left:48.1%;top:29%;background:#1f4e79">20</span>
+        <span class="pin" style="left:51.9%;top:25%;background:#1f4e79">21</span>
+        <span class="pin" style="left:49%;top:20%;background:#1f4e79">22</span>
+        <span class="pin" style="left:18.2%;top:31%;background:#2e7d32">23</span>
+        <span class="pin" style="left:53.8%;top:27%;background:#1f4e79">24</span>
+        <span class="pin" style="left:88.5%;top:71%;background:#ad1457">25</span>
+        <span class="pin" style="left:42.3%;top:67%;background:#424242">26</span>
+        <span class="pin" style="left:62.5%;top:38%;background:#b42318">27</span>
+        <span class="pin" style="left:61%;top:30%;background:#b42318">28</span>
+        <span class="pin" style="left:57.7%;top:49%;background:#d35400">29</span>
+        <span class="pin" style="left:51%;top:23%;background:#1f4e79">30</span>
+        <span class="pin" style="left:50%;top:21%;background:#1f4e79">31</span>
+        <span class="pin" style="left:32.7%;top:25%;background:#2e7d32">32</span>
+        <span class="pin" style="left:28%;top:30.5%;background:#2e7d32">33</span>
+        <span class="pin" style="left:29.8%;top:56%;background:#2e7d32">34</span>
+        <span class="pin" style="left:65%;top:32%;background:#b42318">35</span>
+      </div>
+      <div class="maplegend">Pin numbers match the stories; pin colour is the region.</div>
+    </div>
+    <div class="listbox">
+      <h3>ALSO ON SUNDAY 22 NOVEMBER &mdash; 22 MORE STORIES</h3>
+      <div class="listcols">
+        <ol>
+          <li><b>14</b> Settlers torch cars in four West Bank villages (Kafr Malik)</li>
+          <li><b>15</b> Gaza: 6 killed, 33 wounded in the past 24 hours</li>
+          <li><b>16</b> Drone attacks kill four near Khartoum, damage UN building</li>
+          <li><b>17</b> Rebels kill 24 in a South Sudan cattle-camp raid (Tonj East)</li>
+          <li><b>18</b> South Korea&rsquo;s education minister quits over AI exam cheating</li>
+          <li><b>19</b> Nepal PM Shah arrives in India for his first state visit</li>
+          <li><b>20</b> Marquez clinches an eighth MotoGP title in Portugal</li>
+          <li><b>21</b> Alcaraz beats Zverev for his first ATP Finals crown</li>
+          <li><b>22</b> Liverpool hammer 10-man United 4&ndash;0 in Pochettino&rsquo;s debut</li>
+          <li><b>23</b> Falcon 9 launches NROL-136; booster lands after record turnaround</li>
+          <li><b>24</b> Pope Leo XIV lunches with 1,300 poor people at the Vatican</li>
+        </ol>
+        <ol>
+          <li><b>25</b> 1956 Olympians reunite at the MCG, 70 years to the day</li>
+          <li><b>26</b> Bitcoin holds above $60,000 after Saturday&rsquo;s plunge</li>
+          <li><b>27</b> Saudi defences down a Houthi missile and a drone on Sunday</li>
+          <li><b>28</b> Likud&ndash;Yashar coalition talks end without a deal (Tel Aviv)</li>
+          <li><b>29</b> Fighting traps an Ebola team in a DR Congo hospital</li>
+          <li><b>30</b> France&rsquo;s top union asks to move the 2027 election a week earlier</li>
+          <li><b>31</b> Suffolk village votes 94% to &ldquo;leave the UK&rdquo; over a migrant plan</li>
+          <li><b>32</b> Canada sees no change in US defence ties despite Hegseth memo</li>
+          <li><b>33</b> FBI confirms its crime database was hacked (ABC, Sunday)</li>
+          <li><b>34</b> M5.1 aftershock shakes Pasco in the early hours of Sunday</li>
+          <li><b>35</b> Iran&rsquo;s president turns out his office lights to save energy</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="datecheck"><b>DATE CHECK</b> &mdash; Left out &mdash; they belong to another day: Iran strikes Bahrain + 2 tankers in Hormuz (Sat 21 Nov) &middot; Sparta II hit (Sat) &middot; BepiColombo enters Mercury orbit (Sat 18:24 UTC) &middot; Peru M6.7 quake (Fri 20 Nov) &middot; El Chapo Isidro captured (Fri) &middot; EU&ndash;Indonesia trade pact signed (Sat) &middot; BTS MAMA Awards (Sat) &middot; Gaza aid-vehicle strike (Sat) &middot; FBI hack first reported (Fri 20 Nov) &middot; Bayelsa boat capsizes (Fri) &middot; Manipur liquor deaths (18&ndash;21 Nov) &middot; Belgium national strike (Mon 23 Nov) &middot; &ldquo;Anthropic shares $87.80&rdquo; &mdash; fabricated; Anthropic is private.</div>
+
+  <div class="footer">
+    <div class="line1">Every story here happened, or was first reported, on Sunday 22 November 2026 (UTC).</div>
+    <div class="line2">Sources named beside each story &middot; Original drawings &middot; HOW WE CHECKED: CONFIRMED = 2+ outlets &middot; OFFICIAL = on the record &middot; REPORTED = one outlet &middot; CLAIM = one side&rsquo;s account</div>
+  </div>
+
+</div>
+</body>
+</html>
