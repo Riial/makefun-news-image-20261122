@@ -21,11 +21,11 @@
   .masthead {
     background: #b42318; color: #fff;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 6px 16px; flex: 0 0 46px;
+    padding: 6px 16px; flex: 0 0 44px;
   }
   .masthead .brand {
     font-family: "Noto Serif", "DejaVu Serif", serif;
-    font-weight: 900; font-size: 26px; letter-spacing: 0.5px; white-space: nowrap;
+    font-weight: 900; font-size: 26px; letter-spacing: 0.5px; white-space: nowrap; line-height: 1.1;
   }
   .masthead .meta {
     text-align: right; font-weight: 700; font-size: 12px; line-height: 1.25; letter-spacing: 0.3px;
@@ -34,45 +34,45 @@
   .title {
     font-family: "Noto Serif", "DejaVu Serif", serif;
     font-weight: 900; font-size: 42px; line-height: 1.05; text-align: center;
-    flex: 0 0 48px; padding-top: 2px;
+    flex: 0 0 46px; padding-top: 1px;
   }
   .subtitle {
     text-align: center; font-weight: 700; font-size: 13px;
-    flex: 0 0 16px;
+    flex: 0 0 15px; line-height: 1.15;
   }
   /* ---------- Timeline ---------- */
   .timeline {
     display: flex; justify-content: space-between; align-items: center;
     background: #1a1a1a; color: #fff;
-    flex: 0 0 24px; margin-top: 4px; padding: 0 10px;
-    font-size: 10px; font-weight: 700; overflow: hidden; white-space: nowrap;
+    flex: 0 0 24px; margin-top: 3px; padding: 0 8px;
+    font-size: 9px; font-weight: 700; overflow: hidden; white-space: nowrap;
   }
   .timeline .tl-label { color: #ff6b5e; font-weight: 800; letter-spacing: 0.5px; }
   .timeline .dot { color: #888; font-weight: 400; }
   /* ---------- Stats strip ---------- */
   .stats {
     display: flex; border-top: 2px solid #1a1a1a; border-bottom: 2px solid #1a1a1a;
-    flex: 0 0 62px; margin-top: 4px;
+    flex: 0 0 57px; margin-top: 3px;
   }
-  .stat { flex: 1; text-align: center; padding: 5px 4px 3px 4px; border-right: 1px solid #999; }
+  .stat { flex: 1; text-align: center; padding: 3px 4px 1px 4px; border-right: 1px solid #999; }
   .stat:last-child { border-right: none; }
   .stat .num {
     font-family: "Noto Serif", "DejaVu Serif", serif;
-    font-weight: 900; font-size: 24px; line-height: 1;
+    font-weight: 900; font-size: 23px; line-height: 1;
   }
   .stat .cap { font-size: 10px; line-height: 1.2; margin-top: 2px; }
   /* ---------- Region tabs ---------- */
   .tabs {
     display: flex; justify-content: space-between; align-items: center;
     border-bottom: 1.5px solid #1a1a1a;
-    flex: 0 0 22px; padding: 0 8px;
+    flex: 0 0 20px; padding: 0 8px;
     font-size: 11.5px; font-weight: 700;
   }
   .tabs .dot { color: #999; font-weight: 400; }
   /* ---------- Heroes ---------- */
-  .heroes { display: flex; gap: 10px; flex: 0 0 236px; margin-top: 6px; }
+  .heroes { display: flex; gap: 10px; flex: 0 0 214px; margin-top: 6px; }
   .hero { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-  .hero img { width: 100%; height: 76px; object-fit: cover; display: block; border: 1px solid #999; }
+  .hero img { width: 100%; height: 74px; object-fit: cover; display: block; border: 1px solid #999; }
   .hero svg.heromap { width: 100%; height: 76px; display: block; border: 1px solid #999; }
   .hero-img-wrap { position: relative; }
   .hero-img-wrap .inset {
@@ -81,7 +81,7 @@
   }
   .hero .label {
     background: #b42318; color: #fff; text-align: center;
-    font-weight: 800; font-size: 11px; line-height: 1.25; padding: 2px 4px; margin-top: 2px;
+    font-weight: 800; font-size: 11px; line-height: 1.25; padding: 1px 4px; margin-top: 2px;
     text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; overflow: hidden;
   }
   .hero .loc { text-align: center; font-size: 10px; font-weight: 700; margin-top: 1px; }
@@ -90,17 +90,18 @@
     font-weight: 900; font-size: 19px; line-height: 1.12; margin-top: 3px;
   }
   .hero .body { font-size: 11px; line-height: 1.3; margin-top: 2px; }
-  .hero .src { font-size: 10px; margin-top: auto; padding-top: 3px; display: flex; justify-content: space-between; }
+  .hero .src { font-size: 10px; margin-top: auto; padding-top: 2px; display: flex; justify-content: space-between; }
   .hero .src .badge {
-    border: 1.5px solid #1a1a1a; padding: 0 5px; font-weight: 700; font-size: 9.5px; line-height: 1.5;
+    border: 1.5px solid #1a1a1a; padding: 0 5px; font-weight: 700; font-size: 9.5px; line-height: 1.3;
   }
   /* ---------- Grid ---------- */
   .grid {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;
-    flex: 0 0 205px; margin-top: 6px;
+    flex: 0 0 259px; margin-top: 5px;
     border-top: 1.5px solid #1a1a1a; padding-top: 5px;
   }
   .cell { min-width: 0; display: flex; flex-direction: column; }
+  .cell img.gimg { width: 100%; height: 36px; object-fit: cover; object-position: center 30%; display: block; border: 1px solid #999; margin-bottom: 3px; }
   .cell .tag {
     display: inline-block; align-self: flex-start;
     background: #b42318; color: #fff; font-weight: 800; font-size: 9px;
@@ -117,33 +118,28 @@
     font-weight: 900; font-size: 16px; letter-spacing: 0.5px; text-align: center;
     border-top: 1.5px solid #1a1a1a; border-bottom: 1.5px solid #1a1a1a; padding: 2px 0;
   }
-  .mapwrap { position: relative; flex: 0 0 190px; min-height: 0; margin-top: 4px; background: #e8e0cc; }
-  .mapwrap img { width: 100%; height: 100%; object-fit: contain; display: block; border: 1px solid #999; }
-  .pin {
-    position: absolute; width: 11px; height: 11px; border-radius: 50%;
-    color: #fff; font-size: 6.5px; font-weight: 800; line-height: 11px; text-align: center;
-    transform: translate(-50%,-50%); border: 1px solid #fff; box-shadow: 0 0 1px rgba(0,0,0,.6);
-  }
+  .mapwrap { position: relative; flex: 0 0 168px; min-height: 0; margin-top: 4px; background: #d7e3e8; }
+  .mapwrap svg { width: 100%; height: 100%; display: block; border: 1px solid #999; }
   .maplegend { font-size: 8.5px; text-align: center; margin-top: 2px; color: #333; }
   .listbox { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
   .listbox h3 {
     font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
     border-top: 1.5px solid #1a1a1a; border-bottom: 1.5px solid #1a1a1a; padding: 2px 0;
   }
-  .listcols { display: flex; gap: 14px; flex: 1; min-height: 0; margin-top: 3px; overflow: hidden; }
+  .listcols { display: flex; gap: 10px; flex: 1; min-height: 0; margin-top: 3px; overflow: hidden; }
   .listcols ol { flex: 1; list-style: none; min-width: 0; }
   .listcols li {
-    font-size: 9.8px; line-height: 1.22; padding: 1px 0;
+    font-size: 9.3px; line-height: 1.12; padding: 0.5px 0;
   }
   .listcols li b { font-weight: 800; }
   /* ---------- Date check ---------- */
   .datecheck {
-    border: 1.5px solid #1a1a1a; padding: 3px 8px; margin-top: 6px;
+    border: 1.5px solid #1a1a1a; padding: 3px 8px; margin-top: 4px;
     font-size: 9.5px; line-height: 1.3; flex: 0 0 auto;
   }
   .datecheck b { font-weight: 800; }
   /* ---------- Footer ---------- */
-  .footer { text-align: center; flex: 0 0 auto; margin-top: 4px; }
+  .footer { text-align: center; flex: 0 0 auto; margin-top: 3px; }
   .footer .line1 { font-size: 10.5px; }
   .footer .line2 { font-size: 9px; margin-top: 1px; color: #333; }
 </style>
@@ -153,7 +149,7 @@
 
   <div class="masthead">
     <div class="brand">THE WORLD IN ONE DAY</div>
-    <div class="meta">35 STORIES &middot; 9 REGIONS &middot; EVERY ONE<br>DATED SUNDAY 22 NOVEMBER 2026</div>
+    <div class="meta">35 STORIES &middot; 9 REGIONS &middot; 15 FIELDS &middot; 13 PICTURED<br>EVERY ONE DATED SUNDAY 22 NOVEMBER 2026</div>
   </div>
 
   <div class="title">Sunday 22 November 2026</div>
@@ -162,22 +158,23 @@
 
   <div class="timeline">
     <span class="tl-label">THE DAY IN UTC</span>
-    <span>00:51 Peru M5.1 aftershock</span><span class="dot">&middot;</span>
-    <span>03:00 COP31 objections close</span><span class="dot">&middot;</span>
+    <span>00:00 Khartoum drone strikes</span><span class="dot">&middot;</span>
+    <span>03:00 COP31 objections end</span><span class="dot">&middot;</span>
     <span>05:30 Vegas GP ends</span><span class="dot">&middot;</span>
-    <span>06:00 161 of 186 drones downed</span><span class="dot">&middot;</span>
-    <span>12:23 Falcon 9 lifts off</span><span class="dot">&middot;</span>
-    <span>12:50 COP31 text rejected</span><span class="dot">&middot;</span>
+    <span>06:00 161 of 186 downed</span><span class="dot">&middot;</span>
+    <span>12:23 Falcon 9 launch</span><span class="dot">&middot;</span>
+    <span>12:50 COP31 rejected</span><span class="dot">&middot;</span>
+    <span>18:46 Dymer: 5 dead</span><span class="dot">&middot;</span>
     <span>21:33 Israel talks fail</span>
   </div>
 
   <div class="stats">
     <div class="stat"><div class="num">186</div><div class="cap">&mdash; drones fired at Ukraine overnight</div></div>
     <div class="stat"><div class="num">161</div><div class="cap">&mdash; drones shot down or suppressed</div></div>
-    <div class="stat"><div class="num">14</div><div class="cap">&mdash; missing in the Dymer block collapse</div></div>
+    <div class="stat"><div class="num">24</div><div class="cap">&mdash; civilians killed in the Tonj East raid</div></div>
     <div class="stat"><div class="num">98.79%</div><div class="cap">&mdash; final turnout, Hong Kong polls</div></div>
     <div class="stat"><div class="num">720/9</div><div class="cap">&mdash; India&rsquo;s record Test total in NZ</div></div>
-    <div class="stat"><div class="num">258</div><div class="cap">&mdash; House seats, Democrats&rsquo; best since 1992</div></div>
+    <div class="stat"><div class="num">$60,842</div><div class="cap">&mdash; Bitcoin at 15:23 UTC</div></div>
   </div>
 
   <div class="tabs">
@@ -229,9 +226,9 @@
         <text x="244" y="86" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="700" fill="#b42318">fossil fuels: 0 mentions</text>
       </svg>
       <div class="label">COP31 Ends With No Deal &mdash; Antalya</div>
-      <div class="loc">1 &middot; ANTALYA, T&Uuml;RKIYE &middot; GLOBAL</div>
+      <div class="loc">1 &middot; ANTALYA, T&Uuml;RKIYE &middot; GLOBAL &middot; CLIMATE</div>
       <h2>COP31 ends with no deal &mdash; the longest summit yet</h2>
-      <div class="body">The final 10-page &ldquo;Antalya Pact&rdquo; draft, which never mentions fossil fuels, was rejected on Sunday by the EU, UK, Panama and others. President Murat Kurum conceded &ldquo;there is no agreement on this text&rdquo;.</div>
+      <div class="body">The 10-page &ldquo;Antalya Pact&rdquo; draft, which never mentions fossil fuels, was rejected on Sunday by the EU, UK, Panama and others. President Kurum: &ldquo;there is no agreement on this text&rdquo;.</div>
       <div class="src"><span>Source: Reuters &middot; AP</span><span class="badge">CONFIRMED</span></div>
     </div>
     <div class="hero">
@@ -251,9 +248,9 @@
         </svg>
       </div>
       <div class="label">186 Drones Over Ukraine &mdash; Dymer</div>
-      <div class="loc">2 &middot; DYMER, KYIV REGION &middot; EUROPE</div>
+      <div class="loc">2 &middot; DYMER, KYIV REGION &middot; EUROPE &middot; WAR</div>
       <h2>Russia fires 186 drones; a Kyiv-region block collapses</h2>
-      <div class="body">186 drones were launched overnight; 161 were shot down or suppressed, with hits at 18 locations. A drone destroyed a five-storey block in Dymer: 3 killed, 4 wounded, 14 unaccounted for.</div>
+      <div class="body">186 drones launched overnight; 161 shot down or suppressed, hits at 18 locations. A drone hit a five-storey block in Dymer: 5 dead, 15 missing incl. 2 children, 9 evacuated.</div>
       <div class="src"><span>Source: AP &middot; Kyiv</span><span class="badge">CONFIRMED</span></div>
     </div>
     <div class="hero">
@@ -279,66 +276,86 @@
         <text x="190" y="13" font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="7" font-weight="800" fill="#b42318">2 RADARS CLAIMED (IRGC)</text>
       </svg>
       <div class="label">Iran Claims Radar Hits &mdash; Bahrain Denies</div>
-      <div class="loc">3 &middot; MANAMA, BAHRAIN &middot; MIDDLE EAST</div>
+      <div class="loc">3 &middot; MANAMA, BAHRAIN &middot; MIDDLE EAST &middot; WAR</div>
       <h2>Iran claims radar hits in Bahrain; Bahrain denies</h2>
-      <div class="body">The IRGC said it hit two US Patriot radars at Al-Riffa and Awali Sakhir on Saturday night. Bahrain said Sunday its defences intercepted the attacks; a civilian industrial site was hit and set ablaze, 2 injured.</div>
+      <div class="body">The IRGC said it hit two US Patriot radars at Al-Riffa and Awali Sakhir on Saturday night. Bahrain said its defences intercepted the attacks; a civilian site was hit, 2 injured.</div>
       <div class="src"><span>Source: Reuters &middot; Manama</span><span class="badge">CLAIM</span></div>
     </div>
   </div>
 
   <div class="grid">
-    <div class="cell"><span class="tag">US House</span><h3>Democrats clinch 258 House seats, best since 1992</h3><div class="b">A recount win in North Carolina&rsquo;s 5th district gave Democrats 258 seats, their biggest since 1992.</div><div class="s">Source: Washington &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Serang Fire</span><h3>Candy-factory fire in Cikande: 3 dead, 36 missing</h3><div class="b">The Sunday search went on at the Banten candy plant after Saturday&rsquo;s blaze; 300 workers were inside, 15 rescued.</div><div class="s">Source: Serang &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Benghazi</span><h3>Sea drones hit a Russian warship; it capsizes</h3><div class="b">Suspected Ukrainian sea drones struck the corvette Merkury at Benghazi; it caught fire and mostly sank.</div><div class="s">Source: Benghazi &mdash; CLAIM</div></div>
-    <div class="cell"><span class="tag">Gulf of Finland</span><h3>Burning Sparta II towed out of Finnish waters</h3><div class="b">The Russian cargo ship, hit on Saturday, was still burning; a Russian rescue vessel began towing it out.</div><div class="s">Source: Helsinki &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Las Vegas GP</span><h3>Verstappen wins a wild Las Vegas Grand Prix</h3><div class="b">Verstappen won by 0.639s from Norris after 35 lead changes; his 75th career win.</div><div class="s">Source: Las Vegas &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Wellington Test</span><h3>India declare 720/9, a record total in New Zealand</h3><div class="b">India declared on the highest Test total ever in New Zealand; Rahul 136, Pant 128. NZ closed 119/2, trailing by 233.</div><div class="s">Source: Wellington &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">San Antonio</span><h3>Wembanyama scores 50 in a first-ever 50/15/5/4 game</h3><div class="b">Wemby had 50 points, 19 rebounds, 5 blocks and 4 steals as the Spurs beat the Pelicans 114&ndash;91.</div><div class="s">Source: San Antonio &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Hong Kong Vote</span><h3>Hong Kong polls set a record: 98.79% turnout</h3><div class="b">Final turnout hit a record 98.79%; 856 candidates contested 723 seats, with results on Sunday evening.</div><div class="s">Source: Hong Kong &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Tehran Energy</span><h3>Iran begins rolling power cuts, up to 2 hours a day</h3><div class="b">Cuts began on Sunday, blamed on fuel supply and strikes on gas infrastructure.</div><div class="s">Source: Tehran &mdash; CONFIRMED</div></div>
-    <div class="cell"><span class="tag">Bras&iacute;lia</span><h3>Bolsonaro still in intensive care in Bras&iacute;lia</h3><div class="b">In ICU since Saturday with a bowel obstruction, he had a difficult night; further surgery is possible.</div><div class="s">Source: Bras&iacute;lia &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-04-us-house-0-3dfcd891-2418-49af-9097-a3302a92c7e4.webp" alt="The US Capitol at dusk"><span class="tag">US House &middot; Politics</span><h3>Democrats clinch 258 House seats, best since 1992</h3><div class="b">A recount win in NC&rsquo;s 5th gave Democrats 258 seats, best since 1992.</div><div class="s">Source: Euronews &middot; AP &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-05-cikande-fire-0-d8862903-12a8-48d0-b143-c37e1ce27c6e.webp" alt="Firefighters battling a factory fire at night"><span class="tag">Serang Fire &middot; Disaster</span><h3>Candy-factory fire in Cikande: 3 dead, 36 missing</h3><div class="b">The Sunday search went on at the plant; 300 inside, 15 rescued.</div><div class="s">Source: Reuters &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-06-benghazi-ship-0-c3e40f89-d1e9-4755-b160-66b331400759.webp" alt="A warship listing in harbour"><span class="tag">Benghazi &middot; War</span><h3>Sea drones hit a Russian warship; it capsizes</h3><div class="b">Suspected Ukrainian sea drones hit the corvette Merkury; it caught fire.</div><div class="s">Source: Reuters &middot; AP &mdash; CLAIM</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-07-sparta-tow-0-e111b7f8-bc84-41c0-b3bf-b25217bf9b98.webp" alt="A smouldering cargo ship under tow"><span class="tag">Gulf of Finland &middot; War</span><h3>Burning Sparta II towed out of Finnish waters</h3><div class="b">Hit on Saturday, the Russian ship still burned as a rescue vessel towed it.</div><div class="s">Source: Reuters &middot; Yle &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-08-vegas-gp-0-56a0dc57-26af-4edb-b19e-43825ebe56bf.webp" alt="A Formula 1 car on a neon street circuit at night"><span class="tag">Las Vegas GP &middot; Sport</span><h3>Verstappen wins a wild Las Vegas Grand Prix</h3><div class="b">Verstappen won by 0.639s from Norris after 35 lead changes; 75th career win.</div><div class="s">Source: Reuters &middot; F1 &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-09-india-cricket-0-071238f0-4035-45b3-9475-ef44e69109af.webp" alt="A cricket batsman playing a shot"><span class="tag">Wellington Test &middot; Sport</span><h3>India declare 720/9, a record total in New Zealand</h3><div class="b">India declared on the highest Test total ever in NZ; Rahul 136, Pant 128.</div><div class="s">Source: ESPNcricinfo &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-10-wembanyama-0-9a1e19b3-31b2-43fa-b2ab-f8e8c900257a.webp" alt="A basketball player dunking in a packed arena"><span class="tag">San Antonio &middot; Sport</span><h3>Wembanyama scores 50 in a first-ever 50/15/5/4 game</h3><div class="b">Wemby had 50 points, 19 rebounds, 5 blocks, 4 steals; Spurs won 114&ndash;91.</div><div class="s">Source: AP &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-11-hong-kong-vote-0-953eaabc-ee45-40a3-a6e9-9d9315afa6ad.webp" alt="Voters queuing at a polling station"><span class="tag">Hong Kong Vote &middot; Elections</span><h3>Hong Kong polls set a record: 98.79% turnout</h3><div class="b">Final turnout hit a record 98.79%; 856 candidates contested 723 seats.</div><div class="s">Source: info.gov.hk &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-12-iran-power-0-9e2fe404-b354-404c-bdac-c434a9b47128.webp" alt="A dark city skyline with power pylons"><span class="tag">Tehran Energy &middot; Energy</span><h3>Iran begins rolling power cuts, up to 2 hours a day</h3><div class="b">Cuts began Sunday, blamed on fuel supply and strikes on gas infrastructure.</div><div class="s">Source: RFE/RL &mdash; CONFIRMED</div></div>
+    <div class="cell"><img class="gimg" src="assets/media-generation-grid-13-hospital-0-6e0c0707-aa98-428d-aebb-439c44e4a48a.webp" alt="A hospital building at dusk"><span class="tag">Bras&iacute;lia &middot; Politics</span><h3>Bolsonaro still in intensive care in Bras&iacute;lia</h3><div class="b">In ICU since Saturday, bowel obstruction; difficult night, surgery possible.</div><div class="s">Source: Reuters &mdash; CONFIRMED</div></div>
   </div>
 
   <div class="bottom">
     <div class="mapbox">
       <h3>WHERE IT HAPPENED</h3>
       <div class="mapwrap">
-        <img src="assets/world-map-vintage.png" alt="World map">
-        <span class="pin" style="left:57.7%;top:30%;background:#424242">1</span>
-        <span class="pin" style="left:57.7%;top:22%;background:#1f4e79">2</span>
-        <span class="pin" style="left:63.5%;top:35%;background:#b42318">3</span>
-        <span class="pin" style="left:29.8%;top:28%;background:#2e7d32">4</span>
-        <span class="pin" style="left:78.9%;top:53%;background:#795548">5</span>
-        <span class="pin" style="left:55.8%;top:32%;background:#d35400">6</span>
-        <span class="pin" style="left:57.7%;top:17%;background:#1f4e79">7</span>
-        <span class="pin" style="left:19.2%;top:30%;background:#2e7d32">8</span>
-        <span class="pin" style="left:92.4%;top:72%;background:#6a1b9a">9</span>
-        <span class="pin" style="left:24%;top:34%;background:#2e7d32">10</span>
-        <span class="pin" style="left:80.8%;top:38%;background:#00838f">11</span>
-        <span class="pin" style="left:64.5%;top:28%;background:#b42318">12</span>
-        <span class="pin" style="left:37.5%;top:59%;background:#2e7d32">13</span>
-        <span class="pin" style="left:59%;top:33%;background:#b42318">14</span>
-        <span class="pin" style="left:58%;top:34.5%;background:#b42318">15</span>
-        <span class="pin" style="left:58.7%;top:41%;background:#d35400">16</span>
-        <span class="pin" style="left:57.7%;top:46%;background:#d35400">17</span>
-        <span class="pin" style="left:83.7%;top:29%;background:#00838f">18</span>
-        <span class="pin" style="left:70.2%;top:34%;background:#6a1b9a">19</span>
-        <span class="pin" style="left:48.1%;top:29%;background:#1f4e79">20</span>
-        <span class="pin" style="left:51.9%;top:25%;background:#1f4e79">21</span>
-        <span class="pin" style="left:49%;top:20%;background:#1f4e79">22</span>
-        <span class="pin" style="left:18.2%;top:31%;background:#2e7d32">23</span>
-        <span class="pin" style="left:53.8%;top:27%;background:#1f4e79">24</span>
-        <span class="pin" style="left:88.5%;top:71%;background:#ad1457">25</span>
-        <span class="pin" style="left:42.3%;top:67%;background:#424242">26</span>
-        <span class="pin" style="left:62.5%;top:38%;background:#b42318">27</span>
-        <span class="pin" style="left:61%;top:30%;background:#b42318">28</span>
-        <span class="pin" style="left:57.7%;top:49%;background:#d35400">29</span>
-        <span class="pin" style="left:51%;top:23%;background:#1f4e79">30</span>
-        <span class="pin" style="left:50%;top:21%;background:#1f4e79">31</span>
-        <span class="pin" style="left:32.7%;top:25%;background:#2e7d32">32</span>
-        <span class="pin" style="left:28%;top:30.5%;background:#2e7d32">33</span>
-        <span class="pin" style="left:29.8%;top:56%;background:#2e7d32">34</span>
-        <span class="pin" style="left:65%;top:32%;background:#b42318">35</span>
+        <svg viewBox="0 0 296 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map with numbered story pins">
+          <rect x="0" y="0" width="296" height="190" fill="#d7e3e8"/>
+          <g stroke="#ffffff" stroke-width="0.5" opacity="0.4">
+            <line x1="49" y1="0" x2="49" y2="190"/><line x1="99" y1="0" x2="99" y2="190"/><line x1="148" y1="0" x2="148" y2="190"/><line x1="197" y1="0" x2="197" y2="190"/><line x1="247" y1="0" x2="247" y2="190"/>
+            <line x1="0" y1="32" x2="296" y2="32"/><line x1="0" y1="63" x2="296" y2="63"/><line x1="0" y1="95" x2="296" y2="95"/><line x1="0" y1="127" x2="296" y2="127"/><line x1="0" y1="158" x2="296" y2="158"/>
+          </g>
+          <g fill="#e0d6b8" stroke="#c9bc96" stroke-width="0.7">
+            <path d="M10,25 L33,21 L45,21 L58,22 L70,21 L78,22 L82,28 L86,32 L95,30 L99,38 L103,44 L95,47 L91,49 L86,52 L82,60 L82,66 L79,62 L74,71 L68,77 L61,72 L57,69 L50,58 L44,51 L44,42 L39,35 L33,30 L21,32 L15,30 Z"/>
+            <path d="M82,84 L86,82 L90,81 L97,85 L103,88 L105,90 L107,95 L112,98 L117,100 L119,103 L117,111 L115,118 L109,124 L103,132 L97,137 L95,142 L92,147 L91,151 L88,147 L88,137 L89,126 L91,116 L86,111 L82,103 L82,98 L82,92 Z"/>
+            <path d="M134,79 L140,63 L143,58 L148,57 L156,56 L157,59 L165,61 L173,62 L174,62 L177,65 L179,72 L181,79 L183,83 L186,83 L190,82 L187,90 L182,97 L181,105 L178,114 L175,122 L171,130 L164,132 L162,129 L160,123 L158,114 L159,105 L155,90 L151,88 L141,89 L137,86 L134,82 Z"/>
+            <path d="M140,57 L141,49 L145,44 L150,41 L155,38 L156,35 L163,36 L167,33 L171,32 L173,30 L169,26 L163,25 L158,27 L155,32 L152,34 L150,37 L146,42 L144,46 L141,51 L140,55 Z"/>
+            <path d="M171,30 L177,28 L185,23 L193,22 L201,21 L210,19 L222,16 L234,14 L247,18 L259,19 L271,21 L280,25 L281,32 L278,37 L271,32 L265,40 L263,48 L259,49 L255,51 L252,53 L248,55 L247,60 L245,65 L239,73 L237,76 L234,84 L230,87 L229,82 L226,78 L224,73 L221,72 L219,74 L214,79 L211,86 L210,82 L208,74 L206,70 L202,69 L198,69 L195,68 L192,66 L189,64 L187,63 L184,64 L181,62 L178,57 L175,57 L173,57 L170,56 L167,53 L164,52 L166,48 L168,47 L171,48 L171,46 L173,45 L171,42 L168,40 L164,38 L163,37 L167,36 L171,34 Z"/>
+            <path d="M241,118 L242,127 L243,132 L247,131 L250,130 L254,129 L256,129 L260,132 L263,135 L267,135 L271,134 L274,129 L274,123 L271,118 L268,115 L265,111 L265,107 L261,108 L259,111 L256,108 L255,109 L252,110 L248,113 L245,116 L242,118 Z"/>
+            <path d="M146,42 L148,38 L150,40 L149,44 L147,45 Z"/>
+            <path d="M255,44 L258,34 L261,28 L262,36 L259,46 L256,48 Z"/>
+            <path d="M272,126 L275,124 L276,132 L273,136 L271,130 Z"/>
+            <ellipse cx="236" cy="85" rx="2.5" ry="1.2"/><ellipse cx="241" cy="87" rx="2.5" ry="1.2"/><ellipse cx="246" cy="89" rx="2" ry="1"/><ellipse cx="228" cy="82" rx="2" ry="1"/>
+          </g>
+          <g font-family="Noto Sans, DejaVu Sans, sans-serif" font-size="8" font-weight="800" fill="#fff" text-anchor="middle">
+            <g><line x1="170.8" y1="57" x2="156" y2="74" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="170.8" cy="57" r="2.2" fill="#424242" stroke="#fff" stroke-width="0.7"/><circle cx="156" cy="74" r="6.5" fill="#424242" stroke="#fff" stroke-width="1"/><text x="156" y="76.8">1</text></g>
+            <g><line x1="170.8" y1="41.8" x2="178" y2="52" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="170.8" cy="41.8" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="178" cy="52" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="178" y="54.8">2</text></g>
+            <g><line x1="188" y1="66.5" x2="204" y2="72" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="188" cy="66.5" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="204" cy="72" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="204" y="74.8">3</text></g>
+            <g><circle cx="88.2" cy="53.2" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="88.2" y="56">4</text></g>
+            <g><circle cx="233.5" cy="100.7" r="6.5" fill="#795548" stroke="#fff" stroke-width="1"/><text x="233.5" y="103.5">5</text></g>
+            <g><line x1="165.2" y1="60.8" x2="140" y2="82" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="165.2" cy="60.8" r="2.2" fill="#d35400" stroke="#fff" stroke-width="0.7"/><circle cx="140" cy="82" r="6.5" fill="#d35400" stroke="#fff" stroke-width="1"/><text x="140" y="84.8">6</text></g>
+            <g><line x1="170.8" y1="32.3" x2="184" y2="18" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="170.8" cy="32.3" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="184" cy="18" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="184" y="20.8">7</text></g>
+            <g><line x1="56.8" y1="57" x2="48" y2="48" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="56.8" cy="57" r="2.2" fill="#2e7d32" stroke="#fff" stroke-width="0.7"/><circle cx="48" cy="48" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="48" y="50.8">8</text></g>
+            <g><circle cx="282" cy="136" r="6.5" fill="#6a1b9a" stroke="#fff" stroke-width="1"/><text x="282" y="138.8">9</text></g>
+            <g><line x1="71" y1="64.6" x2="62" y2="74" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="71" cy="64.6" r="2.2" fill="#2e7d32" stroke="#fff" stroke-width="0.7"/><circle cx="62" cy="74" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="62" y="76.8">10</text></g>
+            <g><circle cx="239.2" cy="72.2" r="6.5" fill="#00838f" stroke="#fff" stroke-width="1"/><text x="239.2" y="75">11</text></g>
+            <g><line x1="190.9" y1="53.2" x2="208" y2="36" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="190.9" cy="53.2" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="208" cy="36" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="208" y="38.8">12</text></g>
+            <g><circle cx="111" cy="112.1" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="111" y="114.9">13</text></g>
+            <g><line x1="174.6" y1="62.7" x2="182" y2="74" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="174.6" cy="62.7" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="182" cy="74" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="182" y="76.8">14</text></g>
+            <g><line x1="171.7" y1="65.6" x2="168" y2="86" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="171.7" cy="65.6" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="168" cy="86" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="168" y="88.8">15</text></g>
+            <g><line x1="173.7" y1="77.9" x2="186" y2="84" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="173.7" cy="77.9" r="2.2" fill="#d35400" stroke="#fff" stroke-width="0.7"/><circle cx="186" cy="84" r="6.5" fill="#d35400" stroke="#fff" stroke-width="1"/><text x="186" y="86.8">16</text></g>
+            <g><line x1="170.8" y1="87.4" x2="152" y2="94" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="170.8" cy="87.4" r="2.2" fill="#d35400" stroke="#fff" stroke-width="0.7"/><circle cx="152" cy="94" r="6.5" fill="#d35400" stroke="#fff" stroke-width="1"/><text x="152" y="96.8">17</text></g>
+            <g><circle cx="247.7" cy="55.1" r="6.5" fill="#00838f" stroke="#fff" stroke-width="1"/><text x="247.7" y="57.9">18</text></g>
+            <g><circle cx="207.8" cy="64.6" r="6.5" fill="#6a1b9a" stroke="#fff" stroke-width="1"/><text x="207.8" y="67.4">19</text></g>
+            <g><line x1="142.4" y1="55.1" x2="132" y2="62" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="142.4" cy="55.1" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="132" cy="62" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="132" y="64.8">20</text></g>
+            <g><line x1="153.6" y1="47.5" x2="148" y2="58" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="153.6" cy="47.5" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="148" cy="58" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="148" y="60.8">21</text></g>
+            <g><line x1="145" y1="38" x2="128" y2="30" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="145" cy="38" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="128" cy="30" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="128" y="32.8">22</text></g>
+            <g><line x1="53.9" y1="58.9" x2="44" y2="66" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="53.9" cy="58.9" r="2.2" fill="#2e7d32" stroke="#fff" stroke-width="0.7"/><circle cx="44" cy="66" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="44" y="68.8">23</text></g>
+            <g><line x1="159.2" y1="51.3" x2="166" y2="62" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="159.2" cy="51.3" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="166" cy="62" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="166" y="64.8">24</text></g>
+            <g><line x1="267.2" y1="134.9" x2="252" y2="144" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="267.2" cy="134.9" r="2.2" fill="#ad1457" stroke="#fff" stroke-width="0.7"/><circle cx="252" cy="144" r="6.5" fill="#ad1457" stroke="#fff" stroke-width="1"/><text x="252" y="146.8">25</text></g>
+            <g><circle cx="125.2" cy="127.3" r="6.5" fill="#424242" stroke="#fff" stroke-width="1"/><text x="125.2" y="130.1">26</text></g>
+            <g><line x1="185" y1="72.2" x2="198" y2="92" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="185" cy="72.2" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="198" cy="92" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="198" y="94.8">27</text></g>
+            <g><line x1="180.6" y1="57" x2="192" y2="46" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="180.6" cy="57" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="192" cy="46" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="192" y="48.8">28</text></g>
+            <g><line x1="170.8" y1="93.1" x2="186" y2="100" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="170.8" cy="93.1" r="2.2" fill="#d35400" stroke="#fff" stroke-width="0.7"/><circle cx="186" cy="100" r="6.5" fill="#d35400" stroke="#fff" stroke-width="1"/><text x="186" y="102.8">29</text></g>
+            <g><line x1="151" y1="43.7" x2="162" y2="28" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="151" cy="43.7" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="162" cy="28" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="162" y="30.8">30</text></g>
+            <g><line x1="148" y1="39.9" x2="144" y2="20" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="148" cy="39.9" r="2.2" fill="#1f4e79" stroke="#fff" stroke-width="0.7"/><circle cx="144" cy="20" r="6.5" fill="#1f4e79" stroke="#fff" stroke-width="1"/><text x="144" y="22.8">31</text></g>
+            <g><line x1="96.8" y1="47.5" x2="104" y2="38" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="96.8" cy="47.5" r="2.2" fill="#2e7d32" stroke="#fff" stroke-width="0.7"/><circle cx="104" cy="38" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="104" y="40.8">32</text></g>
+            <g><line x1="82.9" y1="58" x2="74" y2="66" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="82.9" cy="58" r="2.2" fill="#2e7d32" stroke="#fff" stroke-width="0.7"/><circle cx="74" cy="66" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="74" y="68.8">33</text></g>
+            <g><circle cx="88.2" cy="106.4" r="6.5" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="88.2" y="109.2">34</text></g>
+            <g><line x1="192.4" y1="60.8" x2="210" y2="56" stroke="#1a1a1a" stroke-width="0.9"/><circle cx="192.4" cy="60.8" r="2.2" fill="#b42318" stroke="#fff" stroke-width="0.7"/><circle cx="210" cy="56" r="6.5" fill="#b42318" stroke="#fff" stroke-width="1"/><text x="210" y="58.8">35</text></g>
+          </g>
+        </svg>
       </div>
       <div class="maplegend">Pin numbers match the stories; pin colour is the region.</div>
     </div>
@@ -354,15 +371,17 @@
           <li><b>19</b> Nepal PM Shah arrives in India for his first state visit</li>
           <li><b>20</b> Marquez clinches an eighth MotoGP title in Portugal</li>
           <li><b>21</b> Alcaraz beats Zverev for his first ATP Finals crown</li>
+        </ol>
+        <ol>
           <li><b>22</b> Liverpool hammer 10-man United 4&ndash;0 in Pochettino&rsquo;s debut</li>
           <li><b>23</b> Falcon 9 launches NROL-136; booster lands after record turnaround</li>
           <li><b>24</b> Pope Leo XIV lunches with 1,300 poor people at the Vatican</li>
-        </ol>
-        <ol>
           <li><b>25</b> 1956 Olympians reunite at the MCG, 70 years to the day</li>
           <li><b>26</b> Bitcoin holds above $60,000 after Saturday&rsquo;s plunge</li>
           <li><b>27</b> Saudi defences down a Houthi missile and a drone on Sunday</li>
           <li><b>28</b> Likud&ndash;Yashar coalition talks end without a deal (Tel Aviv)</li>
+        </ol>
+        <ol>
           <li><b>29</b> Fighting traps an Ebola team in a DR Congo hospital</li>
           <li><b>30</b> France&rsquo;s top union asks to move the 2027 election a week earlier</li>
           <li><b>31</b> Suffolk village votes 94% to &ldquo;leave the UK&rdquo; over a migrant plan</li>
@@ -379,7 +398,7 @@
 
   <div class="footer">
     <div class="line1">Every story here happened, or was first reported, on Sunday 22 November 2026 (UTC).</div>
-    <div class="line2">Sources named beside each story &middot; Original drawings &middot; HOW WE CHECKED: CONFIRMED = 2+ outlets &middot; OFFICIAL = on the record &middot; REPORTED = one outlet &middot; CLAIM = one side&rsquo;s account</div>
+    <div class="line2">Sources named beside each story &middot; Original drawings &middot; HOW WE CHECKED: CONFIRMED = 2+ outlets &middot; REPORTED = one outlet &middot; CLAIM = one side&rsquo;s account</div>
   </div>
 
 </div>
